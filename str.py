@@ -97,10 +97,46 @@ print("57.",'abcxyzXYbc'.rindex('bc',2))
 print("58.",'ab' in 'bcadeab')
 #7.替换
 #replace,expandtabs,translate & maketrans
-
+print("59.",'xyzabcxyz'.replace('xyz','XYZ'))
+print("60.",'xyzabcxyz'.replace('xyz','XYZ',1))
+print("61.",'xyzabcxyz'.replace('xyb','XYZ',1))
+print("62.",'abc\txyz\tabcd\tabcde'.expandtabs(5))
+print("62.",'abc\txyz\tabcd\tabcde'.expandtabs())
+print("62.",'abc\txyz\tabcd\tabcde'.expandtabs(10))
+in_str='12345678';out_str='loiveuoy'
+map_table=str.maketrans(in_str,out_str)
+print("63.",'3 1745 876'.translate(map_table))
 #8.分割
 #partition & rpartition,split & rsplit & splitlines
-
-
+print("64.",'abcxyz123xyz321'.partition('xyz'))
+print("65.",'abcxyz123xyz321'.rpartition('xyz'))
+print("66.",'abc123abc'.partition('xyz'))
+print("67.",'abc123abc'.rpartition('xyz'))
+print("68.",'1 2 3'.split())
+print("68-1.",'1    2  3'.split())
+print("68-2.",' 1 2 3 '.split())
+print("68-3.",'1 2 3'.split(maxsplit=1))
+print("68-4.",'1 2 3'.rsplit(maxsplit=1))
+print("68-5.",'1 2 3\n'.split())
+print("69.",'1,2,3'.split(','))
+print("70.",'1,2,3'.split(',',1))
+print("71.",'1,2,,3'.split(',',1))
+print("72.",'1,2,,3'.split(',,'))
+print("73.",'1 2 3\n'.split(' '))
+print("74.",'1 2\n 3\n'.split('\n'))
+print("75.",'ab c\n\nde fg\rkl\r\n'.splitlines())
+print("76.",'ab c\n\nde fg\rkl\r\n'.splitlines(keepends=True))
+print("77.",'One line\n'.split('\n'))
+print("78.",'Two line\n'.splitlines())
 #9.修剪
 #strip,lstrip,rstrip
+print("79.",' a b c a '.strip().strip('a'))
+print("80.",'a b c a'.lstrip('a'))
+print("81.",'a b c a'.rstrip('a'))
+print("82.",'www.example.com'.lstrip('cmowz.'))
+print("83.",'www.example.com'.rstrip('cmowz.'))
+print("84.",'www.example.com'.strip('cmowz.'))
+print("85.",'mwmww.example.com'.strip('m'))
+print("86.",'mwmww.example.com'.replace('m',''))
+
+
