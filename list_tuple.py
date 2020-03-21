@@ -4,11 +4,12 @@ a=[1,2,3,4,5] #[]-list,有序，可变
 b=(1,2,3,4,5,) #()-tuple，有序，不可变
 c=['abc',123,True]
 d=[['a','b','c'],'abc',321,(1,2,3)]
+e=([1,2],3,"a")
 print(a)
 print(b)
 print(c)
 print(d)
-
+print(e)
 #1.list的常规操作
 print('1.',len(a))
 print('2.',a[1])
@@ -95,3 +96,31 @@ random = [(2, 2), (3, 4), (4, 1), (1, 3)]
 random.sort(key=takeSecond) 
 # 输出类别
 print ('排序列表：', random)
+
+#2.tuple的操作
+
+#tuple的创建，内容不可修改，不可删除，元素有序，可以为多种类型，也可嵌套
+tup=1,2,3,4,5
+tup1=(1,2,3,4,5)
+tup2=('a',)
+tup3=((1,2),(3,4),(5,))
+print(tup,tup1,tup2,tup3)
+
+#tuple的访问，索引，切片
+print("31.",tup[1],tup[-2],tup[:3],tup[2:],tup[::2])
+
+#tuple的连接
+print("32.",tup1+tup2)
+
+#删除整个tuple
+del tup3
+
+#运算符：+，×
+tup4=tup*2
+print("33.",tup4,tup+tup2)
+
+#查找：count,index
+print("34.",(tup+(1,)).count(1),tup.index(4))
+
+#内置函数：len,max,min,tuple()
+print("35.",len(tup),max(tup),min(tup),tuple(a))
