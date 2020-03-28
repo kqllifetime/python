@@ -1,11 +1,11 @@
-#!/usr/bin/env python3.8
-# -*- coding: utf-8 -*-
+#!/usr/bin/env python3.8        #指定解释器
+# -*- coding: utf-8 -*-         #指定编码方式
 
-'a test module'
+'a test module'                 #首行的字符代表备注
 
-__author__='kql'
+__author__='kql'                #特殊变量，给予特殊意义
 
-import sys
+import sys                      #导入模块
 
 def test():
     args=sys.argv
@@ -16,5 +16,18 @@ def test():
     else:
         print('Too many arguments!')
 
-if __name__=='__main__':
+def _private_1(name):               #私有函数，名称前加‘_'
+    return 'Hello,%s'%name
+
+def _private_2(name):
+    return 'Hi,%s'%name
+
+def greeting(name):
+    if len(name)>3:
+        return _private_1(name)
+    else:
+        return _private_2(name)
+
+if __name__=='__main__':            #判断是否为命令行调用
     test()
+
